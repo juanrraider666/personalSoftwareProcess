@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sprintlog">
+        <item>Doumentation</item>
+        <item>Syntax</item>
+        <item>Build</item>
+        <item>Package</item>
+        <item>Assigment</item>
+        <item>Interface</item>
+        <item>Checking</item>
+        <item>Data</item>
+        <item>Function</item>
+        <item>System</item>
+        <item>Enviroment</item>
+
+
+
+
+
+
+
+    </string-array>
+
+
+</resources>

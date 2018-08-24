@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="34dp"
+        android:id="@+id/idimagenclose"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:src="@drawable/ic_close"
+
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+
+        android:layout_alignParentLeft="true"
+        app:cardBackgroundColor="@color/ColorCard"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="13dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:gravity="center"
+                    android:background="@drawable/botones"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                  android:textColor="@color/colorLetras"
+                    android:text="Time Log" />
+
+                <TextView
+                    android:background="@drawable/botones"
+                    android:id="@+id/txt2"
+                    android:gravity="center"
+                    android:textColor="@color/colorLetras"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="Defect Log" />
+                <TextView
+                    android:background="@drawable/botones"
+                    android:gravity="center"
+                    android:textColor="@color/colorLetras"
+                    android:id="@+id/txt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="Project Plan summary" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

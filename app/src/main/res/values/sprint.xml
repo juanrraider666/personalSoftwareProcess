@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sprint">
+        <item>PLAN</item>
+        <item>DLD</item>
+        <item>CODE</item>
+        <item>COMPILE</item>
+        <item>UT</item>
+        <item>PM</item>
+
+
+    </string-array>
+
+
+
+</resources>

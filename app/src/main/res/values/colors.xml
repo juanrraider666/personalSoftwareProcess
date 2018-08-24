@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#122aac</color>
+    <color name="colorPrimaryDark">#273393</color>
+    <color name="colorAccent">#1c29e1</color>
+    <color name="colorLetras">#fafafa</color>
+    <color name="VerdeIconito">#38ea18</color>
+    <color name="ColorCard">#4c6dd7</color>
+    <color name="ColorSubtitulo">#92eaec</color>
+    <color name="ColorBoton">#71d4d7</color>
+    <color name="ColorBoton2">#5f68e6</color>
+</resources>

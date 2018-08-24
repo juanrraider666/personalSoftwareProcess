@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".Vista.Defect_log">
+
+    <ImageView
+        android:id="@+id/idimvolerdefectlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/letras"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:text="DEFECT LOG" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/iddatos"
+            android:textColor="@color/colorLetras"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name"
+           />
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/ColorCard"
+            app:cardUseCompatPadding="true"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/idbtndatos"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:background="@android:color/transparent"
+                android:text="DATE"
+                android:textColor="@color/ColorSubtitulo" />
+        </android.support.v7.widget.CardView>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+
+        <Spinner
+            android:id="@+id/idspinnermuchos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+
+        <Spinner
+            android:id="@+id/idspinnermedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+
+        <Spinner
+            android:id="@+id/idspinnerpocos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/ColorCard"
+
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnstart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:textColor="@color/ColorSubtitulo"
+                app:srcCompat="@mipmap/ic_play" />
+
+        </android.support.v7.widget.CardView>
+
+        <Chronometer
+            android:id="@+id/cronometro"
+            android:layout_width="192dp"
+          android:gravity="center"
+            android:layout_height="match_parent" />
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/ColorCard"
+
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnpause"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                app:srcCompat="@mipmap/ic_stop" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/ColorCard"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <ImageButton
+                android:id="@+id/btnreplay"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_restar" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/iddescripcion2"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:ems="10"
+        android:textColor="@color/colorLetras"
+        android:hint="Descripcion"
+        android:inputType="textMultiLine" />
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/ColorBoton"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="25dp">
+    <Button
+        android:id="@+id/idbtnregistrar2"
+        android:layout_width="332dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:elevation="25dp"
+        android:paddingTop="10dp"
+        android:text="Registrar"
+        android:textColor="#fff" />
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

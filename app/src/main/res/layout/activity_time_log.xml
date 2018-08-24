@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:background="@drawable/fondo"
+    android:layout_height="match_parent"
+    tools:context=".Vista.TimeLog">
+
+    <ImageView
+        android:id="@+id/idvolver1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        android:contentDescription="atras" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/letras"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:text="TIME LOG" />
+
+
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+        android:layout_height="60dp">
+
+        <Spinner
+            android:id="@+id/dispinnerlog"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_weight="1"
+            android:background="@color/ColorCard" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/idtxthorayfecha"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+           android:hint="Name"
+            android:textColor="@color/ColorCard" />
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/ColorCard"
+            app:cardUseCompatPadding="true"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/idbtnstart"
+                android:textColor="@color/ColorSubtitulo"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="Start" />
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/idinterrupcines"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName|number"
+            android:hint="Interruption"
+            android:textColor="@color/ColorCard" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/idfechafinal"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Stop"
+            android:inputType="textPersonName|number"
+            android:textColor="@color/ColorCard" />
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/ColorCard"
+            app:cardUseCompatPadding="true"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnstop"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Stop"
+            android:textColor="@color/ColorSubtitulo" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiempo total de la fase:"
+        android:textAllCaps="false"
+        android:textColor="@color/ColorSubtitulo"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/idresultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ColorCard"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/ColorSubtitulo" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/kkjeje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descripcion:"
+        android:textAllCaps="false"
+        android:textColor="@color/ColorSubtitulo"
+        android:textStyle="italic" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/iddescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/ColorCard"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLines="3" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+</LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/ColorBoton"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="25dp">
+
+        <Button
+            android:id="@+id/btnregistrar"
+            android:layout_width="332dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:elevation="25dp"
+            android:paddingTop="10dp"
+            android:text="Registrar"
+            android:textColor="#fff" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/idtiempo1"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/idtiempo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2" />
+
+
+</LinearLayout>
