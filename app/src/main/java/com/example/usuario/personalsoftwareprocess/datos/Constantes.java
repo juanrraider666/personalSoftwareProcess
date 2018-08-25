@@ -1,14 +1,15 @@
 package com.example.usuario.personalsoftwareprocess.datos;
 
 public class Constantes {
-
-    public static final String BD = "bdpsoftwareV1.bd";
-
-    public static final String COLUMN_PROYECTO = "Nombre";
-    public static  final  String COLUMN_TIME_RPYECTO = "TiempoPoryecto";
+//PORYECTO,DEFECTLOG,TIMELOG
+    public static final String BD = "bdpsoftwareV6.bd";
     public  static  final String Table_proyecto="Proyecto";
+    public static final String COLUMN_PROYECTO = "Nombre";
+    public static  final  String COLUMN_TIME_RPYECTO = "TiempoProyecto";
+    public static  final  String COLUMN_TIME_RPYECTO_ACTUALIZAR = "TiempoProyecto=?";
+
     public static final String CREATE_TABLE_PROYECTO = " CREATE TABLE " +Table_proyecto+"( IdProyecto INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,"+
-            COLUMN_PROYECTO+" TEXT "+COLUMN_TIME_RPYECTO+" TEXT "+");";
+            COLUMN_PROYECTO+" TEXT,  "+COLUMN_TIME_RPYECTO+ " INTEGER "+");";
     public static final String SQL_DELETE = " DROP TABLE "+Table_proyecto;
 
 
@@ -26,7 +27,7 @@ public class Constantes {
 
 
 
-    public static final String CREATE_TABLE_TIMELOG = " CREATE TABLE " + Table_Timelog + " ( IdTimelog INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,  " +
+    public static final String CREATE_TABLE_TIMELOG = " CREATE TABLE "+Table_Timelog+" ( Idlog INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,  " +
             COLUNM_PHASE+ " TEXT, "+
             COLUNM_FECHA_INICIO+ " TEXT, "  +
             INTERRUPCIONES+ " INTEGER, "  +
@@ -58,9 +59,9 @@ public class Constantes {
             +COLUMN_PHASINJECT+" TEXT, "
             + COLUMN_PHASEREMOVED+" TEXT,"
             + COLUMN_TIME+" TEXT,"
-            +DESCRIPCIONDEFECT
-            + " TEXT,"+COLUMN_IDPROYECTO+ " INTEGER  "+");";
+            +DESCRIPCIONDEFECT + " TEXT,"+
+            COLUMN_IDPROYECTO+ " INTEGER "+");" ;
 
-    public static final String SQL_DELETE_DEFECT = " DROP TABLE "+TableDefectLog;
+    public static final String SQL_DELETE_DEFECT = " DROP TABLE " + TableDefectLog;
 
 }

@@ -33,16 +33,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 Dialog epicdialog;
-TextView txt1,txt2,txt3;
+TextView txt1,txt2,txt3,txtextra;
 ImageView imagenclose;  // PARA LE MENSAJE DE DIALOGO
 
 
 ImageView imagen;
 Datos datos;
+int Time = 0;
+String extra;
 
-
-    EditText txtidproyecto;
-  ArrayList<com.example.usuario.personalsoftwareprocess.datos.Proyectos> Proyectos = new ArrayList<>();
+EditText txtidproyecto;
+ArrayList<com.example.usuario.personalsoftwareprocess.datos.Proyectos> Proyectos = new ArrayList<>();
 ListView lista;
 
 
@@ -65,35 +66,31 @@ ListView lista;
 
 
    lista = findViewById(R.id.lista);
-   mtdlistar();
+ // mtdlistar();
 
 
 //AL DAR CLICK SOBRE LA LISTA
 lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-mtdverdialogo();
-    }
-});
 
 
-
-
-    }
-
-
-    //METODO PARA TRAER EL CONTENIDO DEL DIALOGO
-    private void mtdverdialogo() {
-   epicdialog.setContentView(R.layout.mensaje);
-   imagenclose  = epicdialog.findViewById(R.id.idimagenclose);
+        epicdialog.setContentView(R.layout.mensaje);
+        imagenclose  = epicdialog.findViewById(R.id.idimagenclose);
         txt1 =epicdialog.findViewById(R.id.txt1);
         txt2 =epicdialog.findViewById(R.id.txt2);
         txt3 =epicdialog.findViewById(R.id.txt3);
+        txtextra =epicdialog.findViewById(R.id.txtextra);
+
+       txtextra.setText(String.valueOf(position));
+
+        extra  = txtextra.getText().toString();
 
         txt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,TimeLog.class);
+
                 startActivity(intent);
             }
         });
@@ -101,6 +98,7 @@ mtdverdialogo();
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,Defect_log.class);
+                intent.putExtra("Datos", extra);
                 startActivity(intent);
             }
         });
@@ -122,8 +120,22 @@ mtdverdialogo();
                 epicdialog.dismiss();
             }
         });
-epicdialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-epicdialog.show();
+        epicdialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        epicdialog.show();
+
+
+
+    }
+});
+
+
+
+
+    }
+
+
+    //METODO PARA TRAER EL CONTENIDO DEL DIALOGO
+    public void mtdverdialogo() {
 
     }
 
@@ -142,7 +154,7 @@ epicdialog.show();
             Animation  animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotacion);
             Proyectos proyectos = new Proyectos(
 
-                    txtidproyecto.getText().toString()
+                    txtidproyecto.getText().toString(),Time
 
 
             );
@@ -170,16 +182,16 @@ if(conexion!=null){
     SQLiteDatabase DB = conexion.getReadableDatabase();
     Cursor cursor  = DB.rawQuery("select  * from Proyecto",null);
     if(ver == 1){
-        cursor  = DB.rawQuery("select Nombre from Proyecto  order by Id desc limit 1",null);
+        cursor  = DB.rawQuery("select Nombre,TiempoProyecto from Proyecto  order by IdProyecto desc limit 1",null);
         if(cursor.moveToLast()){
 
-            Proyectos.add(new Proyectos(cursor.getString(0)));
+            Proyectos.add(new Proyectos(cursor.getString(0),cursor.getInt(1)));
 
         }
     }else{
         if(cursor.moveToFirst()){
             do {
-                Proyectos.add(new Proyectos(cursor.getString(1)));
+                Proyectos.add(new Proyectos(cursor.getString(0),cursor.getInt(1)));
             }while (cursor.moveToNext());
         }
     }

@@ -5,22 +5,32 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     tools:context=".Vista.tabbed">
 
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="299dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="249dp"
-        android:text="Mono2"
+    <ListView
+        android:layout_width="312dp"
+        android:layout_height="381dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/letras"
+        android:layout_width="343dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="58dp"
+        android:text=" DEFECTOS REMOVIDOS "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

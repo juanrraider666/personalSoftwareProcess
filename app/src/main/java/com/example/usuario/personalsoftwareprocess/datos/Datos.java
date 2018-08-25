@@ -46,10 +46,18 @@ sqLiteDatabase.insert(Constantes.Table_proyecto,null,contentValues);
     public  void InsertDefectLog(Defect_log_datos pojo){
         ContentValues contentValues = pojo.tovalues();
         sqLiteDatabase.insert(Constantes.TableDefectLog,null,contentValues);
+        }
 
+
+    public void ActualizarTiempo(String  Id,ContentValues contentValues){
+
+        String[] tomarArgumentos =  new String[]{String.valueOf(Id)};
+
+        sqLiteDatabase.update(Constantes.Table_proyecto, contentValues,Constantes.COLUMN_TIME_RPYECTO_ACTUALIZAR,tomarArgumentos);
 
 
     }
+
 
 
 }

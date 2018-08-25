@@ -13,8 +13,12 @@ public class Defect_log_datos {
     private String Phaseremoved;
     private String Time;
     private String Descripcion;
+public  Defect_log_datos(){
 
-    public Defect_log_datos(String type, String phaseInject, String phaseremoved, String time, String descripcion) {
+    }
+    public Defect_log_datos( int idProyecto, String type, String phaseInject, String phaseremoved, String time, String descripcion) {
+
+        IdProyecto = idProyecto;
         Type = type;
         PhaseInject = phaseInject;
         Phaseremoved = phaseremoved;

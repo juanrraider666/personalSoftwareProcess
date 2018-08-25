@@ -14,18 +14,18 @@ public class Conexion extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
       db.execSQL(Constantes.CREATE_TABLE_PROYECTO);
-       db.execSQL(Constantes.CREATE_TABLE_TIMELOG);
-        db.execSQL(Constantes.CREATE_TABLE_DEFECT);
+      db.execSQL(Constantes.CREATE_TABLE_TIMELOG);
+ db.execSQL(Constantes.CREATE_TABLE_DEFECT);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
        db.execSQL(Constantes.SQL_DELETE);
         onCreate(db);
-        db.execSQL(Constantes.SQL_DELETE_TIMELOG);
-        onCreate(db);
+       db.execSQL(Constantes.SQL_DELETE_TIMELOG);
+    onCreate(db);
 
-        db.execSQL(Constantes.SQL_DELETE_DEFECT);
+     db.execSQL(Constantes.SQL_DELETE_DEFECT);
         onCreate(db);
 
     }

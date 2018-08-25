@@ -30,7 +30,9 @@ ImageView imageViewvolver;
 
 Button btnstart,btnstop, btnresgistrar;
 EditText txthorayfecha, txtinterrupciones,txtfechafinal,Descripcion;
-TextView txtresultado,txttiempo1,txttiempo2;
+TextView txtresultado;
+
+
     int hora=0, minuto =0, segundo = 0;
     String sec, min, hor, curTime;
     int hora1,hora2;
@@ -50,8 +52,8 @@ Datos datos;
 btnstop = findViewById(R.id.btnstop);
 btnstart = findViewById(R.id.idbtnstart);
 btnresgistrar = findViewById(R.id.btnregistrar);
-txttiempo1 = findViewById(R.id.idtiempo1);
-txttiempo2 = findViewById(R.id.idtiempo2);
+
+
 
         spinner = findViewById(R.id.dispinnerlog);
         txthorayfecha = findViewById(R.id.idtxthorayfecha);

@@ -19,7 +19,11 @@
         <activity android:name=".Vista.TimeLog" >
 
         </activity>
-        <activity android:name=".Vista.Defect_log" />
+        <activity android:name=".Vista.Defect_log">
+
+
+        </activity>
+
         <activity
             android:name=".Vista.tabbed"
             android:label="@string/title_activity_tabbed"
